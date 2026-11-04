@@ -1,0 +1,126 @@
+pip instal openpyxl
+pip installopenpyxl
+pip install openpyxl
+pip list
+pip install termcolor
+pip install pyfiglet
+pip installe pillow
+pip install pillow
+pip install pylint
+pip install pandas
+pip install xgboost lightgbm
+pip ins
+pip install pandas 
+pip install matplot
+pip install numpy
+pip install sklearn
+pip install pygame
+pip install tflite-runtime numpy
+pip install tensorflow numpy bleak websockets
+pip install pandas numpy tensorflow
+!pip install ultralytics
+!pip install deep-sort-realtime
+!pip install opencv-python
+!pip install matplotlib
+!pip install pandas
+!pip install tqdm
+pip install numpy
+pip install scikit-learn
+pip install -r requirments.txt
+pip install -r requirements.txt
+pip install flask
+c:\Users\USER\flask project\.venv\Scripts\python.exe -m pip install -r requirments.txt
+pip install -r requirements.txt
+pip show flask
+pip install flask
+pip insalle flask
+pip install flask
+pip insall google_auth_oauthlib.flow
+pip install google-auth-oauthlib google-api-python-client google-auth-httplib2
+pip install bleak requests
+git init
+git add .
+git commit -m "Initial project upload"
+git config --global user.name "waleed23012"
+git config --global user.email "waleed200512alazzam@gmail.com"
+git commit -m "Initial project upload"
+git remote add origin https://github.com/waleed23012/indoor-navigation.git
+git remote add origin https://github.com/waleed23012/indoor-navigation.git
+git branch -M main
+git push -u origin main
+git lfs install
+git lfs track "*.glb"
+git add .gitattributes
+git add .
+git commit -m "Add GLB models using Git LFS"
+git push origin main
+git lfs ls-files
+git filter-repo --help
+git filter-repo --path public/models/building_final.glb --path public/models/building_high.glb --invert-paths
+git add .
+git commit -m "Fix large GLB files with Git LFS"
+git push origin main --force
+git config --global http.postBuffer 524288000
+git config --global http.maxRequestBuffer 100M
+git push origin main --force
+git clone https://github.com/microsoft/vcpkg.git C:\vcpkg
+python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
+python -m pip install -r requirements.txt
+pip install -r requirements-dev.txt
+pip install -r requirements-dev.txt
+pip install -r requirements-dev.txt
+Expand-Archive -Path C:\Users\USER\Downloads\step3-docker.zip -DestinationPath . -Force
+docker build -t shelf-hand-classifier .
+docker --version
+dir Dockerfile
+docker build -t shelf-hand-classifier .
+docker info
+docker build -t shelf-hand-classifier .
+docker run --rm -p 8000:8000 --name shelf shelf-hand-classifier
+docker exec shelf whoami
+docker ps
+docker images shelf-hand-classifier
+docker image inspect python:3.13-slim-trixie --format "{{index .RepoDigests 0}}"
+docker buildx imagetools inspect python:3.13-slim-trixie
+docker build -t shelf-hand-classifier .
+docker --version
+dir Dockerfile
+docker build -t shelf-hand-classifier .
+git --version
+git init -b main
+git add .
+git status
+git commit -m "Lab 2: FastAPI service, tests and Dockerfile"
+git remote add origin https://github.com/USERNAME/shelf-hand-classifier.git
+git push -u origin main
+git remote set-url origin https://github.com/waleed23012/shelf-hand-classifier.git\
+git push -u origin main
+git remote set-url origin https://github.com/waleed23012/shelf-hand-classifier.git
+git remote -v
+git push -u origin main
+git checkout -b add-ci
+git checkout -b add-ci
+git add .github
+git commit -m "Add CI: lint, test, build, Trivy scan, push to GHCR"
+git push -u origin add-ci
+git add requirements.txt
+git commit -m "Bump pillow to 13.0.0 to fix 5 critical CVEs"
+git push
+git status
+git status
+git checkout main
+git pull
+git status
+git diff requirements.txt
+git diff requirements.txt
+git add requirements.txt
+git commit -m "Bump pillow to 13.0.0 to fix 5 critical CVEs"
+git push
+docker --version
+docker login ghcr.io -u waleed23012
+docker build -t shelf-local .
+code .github/workflows/process-video.yml
+  Select-String -Pattern "git|docker|pip|pillow" |`
+  Select-String -Pattern "git|docker|pip|pillow" |`
+  Select-String -Pattern "git|docker|pip|pillow" |`
