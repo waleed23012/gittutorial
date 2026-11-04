@@ -1,0 +1,244 @@
+
+#include <iostream>
+#include <string>
+#include<cmath>
+#include <iomanip>
+using namespace std;
+int random_number_from_to(int from, int to) {
+	int random = rand() % (to - from + 1) + from;
+	return random;  
+}
+
+void fill_array(int arr[3][3],int from,int to) {
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			arr[i][j] = random_number_from_to(from, to);
+		}
+	}
+}
+
+void print_array(int arr[3][3],int row,int col) {
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			cout << setfill('0') << setw(2) << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+void print_array_with_transbose_style(int arr[3][3], int row, int col) {
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			cout << setw(3) << arr[j][i];
+		}
+		cout << endl;
+	}
+}
+
+void print_array(int arr[3]) {
+	for (int i = 0; i < 3; i++) {
+		cout << "Row " << i+1 << " sum = " << arr[i] << endl;
+	}
+}
+void summation_number_in_same_row(int arr[3][3],int new_arr[3]) {
+	int row1 = 0;
+	int row2 = 0;
+	int row3 = 0;
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (i == 0)
+				row1 += arr[i][j];
+			else if (i == 1)
+				row2 += arr[i][j];
+			else
+				row3 += arr[i][j];
+		}
+	}
+	new_arr[0] = row1;
+	new_arr[1] = row2;
+	new_arr[2] = row3;
+
+}
+
+void  arr_with_order_number(int arr[3][3],int row,int col) {
+	int counter = 0;
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			counter++;
+			arr[i][j] = counter;
+
+
+		}
+	}
+}
+void multiply_tow_random_matrex(int arr1[3][3], int arr2[3][3],int new_arr[3][3], int row, int col) {
+	fill_array(arr1, 1, 10);
+	fill_array(arr2, 1, 10);
+
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			new_arr[i][j] = arr1[i][j] * arr2[i][j];
+
+		}
+	}
+}
+
+void print_three_array(int arr1[3][3], int arr2[3][3], int new_arr[3][3], int row, int col) {
+	cout << "array number 1 : \n";
+	print_array(arr1, 3, 3);
+	cout << "array number 2 : \n";
+
+	print_array(arr2, 3, 3);
+	cout << "multiply tow array : \n";
+
+	print_array(new_arr, 3, 3);
+
+}
+void print_middel_row_and_col(int arr[3][3], int row, int col) {
+	cout << "print matrix : " << endl;
+
+	print_array(arr, 3, 3);
+	cout << "print middel row : " << endl;
+	for (int i = 0; i < row;i++) {
+		cout << setw(2) << setfill('0') << arr[1][i]<<"  ";
+	}
+	cout <<endl<< "print middel col : " << endl;
+	for (int i = 0; i < col;i++) {
+		cout << setw(2)<< setfill('0')<<arr[i][1]<<"  ";
+	}
+}
+int sumation_element_in_matrex(int arr[3][3], int row, int col) {
+	int counter = 0;
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			counter += arr[i][j];
+		}
+	}
+	return counter;
+}
+bool are_eqal_matrex(int arr1[3][3], int arr2[3][3], int row, int col) {
+	int sum1 = 0;
+	int sum2 = 0;
+
+	sum1 = sumation_element_in_matrex(arr1, row, col);
+	sum2 = sumation_element_in_matrex(arr2, row, col);
+	if (sum1 == sum2) {
+		return true;
+	}
+	else {
+		return false;
+
+	}
+}
+bool if_tow_matreses_are_tepcal(int arr1[3][3], int arr2[3][3], int row, int col) {
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < col; j++) {
+			if (arr1[i][j] != arr2[i][j]) {
+				return false;
+			}
+		}
+	}
+	return true;
+
+}
+void counter_repeted(int arr[3][3]) {
+	//print_array(arr, 3, 3);
+	int x = 0;
+	cout << "please enter the check number :";
+	cin >> x;
+	int count = 0;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (x == arr[i][j]) {
+				count++;
+
+			}
+		}
+	}
+	cout << endl << "the number " << x << " was repeated : " << count;
+
+}
+void if_sparse_matrex(int arr[3][3]) {
+	int counter_zeros = 0;
+	int counter_non_zeros = 0;
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (arr[i][j] == 0) {
+				counter_zeros++;
+		}
+			else {
+				counter_non_zeros++;
+			}
+		}
+	}
+	if (counter_non_zeros > counter_zeros) {
+		cout << "the matrex is not sparse";
+	}
+	else {
+		cout << "the matrex is  sparse";
+
+	}
+}
+int min_number_in_matrex(int arr[3][3]) {
+	int min_num = arr[0][0];
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (min_num > arr[i][j]) {
+				min_num = arr[i][j];
+			}
+		}
+	}
+	return min_num;
+}
+int max_number_in_matrex(int arr[3][3]) {
+	int max_num = arr[0][0];
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (max_num < arr[i][j]) {
+				max_num = arr[i][j];
+			}
+		}
+	}
+	return max_num;
+}
+		int main() {
+	srand((unsigned)time(NULL));
+	int arr1[3][3],arr2[3][3],new_arr[3][3];
+	/*int arr_sum[3];
+
+	fill_array(arr);
+	print_array(arr);
+	summation_number_in_same_row(arr,arr_sum);
+	print_array(arr_sum);*/
+	/*arr_with_order_number(arr,3,3);
+	cout << "print array with normal style : " << endl;
+	print_array(arr,3,3);
+	cout << "print array with transpose style : " << endl;
+
+	print_array_with_transbose_style(arr, 3, 3);*/
+	/*multiply_tow_random_matrex(arr1, arr2, new_arr,3,3);
+	print_three_array(arr1, arr2, new_arr, 3, 3);*/
+	/*cout << "array number 1: " << endl;
+	fill_array(arr1, 1, 10);
+	print_array(arr1, 3, 3); */
+	cout << "array number 2: " << endl;
+
+	fill_array(arr2, 1, 100);
+
+	/*cout <<endl<< "the array is :";
+	if (if_tow_matreses_are_tepcal(arr1, arr2, 3, 3)) {
+		cout << "typical";
+	}
+	else {
+		cout << "not typical";
+	}*/
+	//counter_repeted(arr2);
+	int arr[3][3] = { {0,0,0},{0,0,0},{2,5,1} };
+	print_array(arr2, 3, 3);
+	cout << "the min number in array is :" << min_number_in_matrex(arr2) << endl;
+	cout << "the max number in array is :" << max_number_in_matrex(arr2) << endl;
+
+	
+	return 0;
+}
+
